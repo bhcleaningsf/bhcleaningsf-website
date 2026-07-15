@@ -31,7 +31,102 @@
 <div class="contact-list"><a href="tel:+16507200743"><strong>Phone / SMS</strong><br>(650) 720-0743</a><a href="https://wa.me/16507200743"><strong>WhatsApp</strong><br>Message us directly</a><a href="mailto:bhcleaning.sf@gmail.com"><strong>Email</strong><br>bhcleaning.sf@gmail.com</a></div>
 <div class="social-buttons"><a href="https://instagram.com/bhcleaningsf" target="_blank" rel="noopener">Instagram</a><a href="https://facebook.com/bhcleaningsf" target="_blank" rel="noopener">Facebook</a><a href="https://tiktok.com/@bhcleaningsf" target="_blank" rel="noopener">TikTok</a></div>
 </div>
-<div class="fade"><form id="quote-form"><div><label for="name">Name</label><input id="name" required></div><div><label for="service">Service</label><select id="service"><option>Residential Cleaning</option><option>Deep Cleaning</option><option>Office / Commercial Cleaning</option><option>Move-In / Move-Out Cleaning</option><option>Short-Term Rental Cleaning</option><option>Carpet Cleaning</option><option>Window Cleaning</option></select></div><div><label for="city">City</label><input id="city" required></div><div><label for="details">Tell us about your cleaning needs</label><textarea id="details"></textarea></div><button class="btn btn-gold" type="submit">Send Estimate Request</button></form></div>
+
+<div class="fade">
+<form id="quote-form" novalidate>
+  <div class="form-row">
+    <div>
+      <label for="name">Full Name *</label>
+      <input id="name" name="name" autocomplete="name" required>
+    </div>
+    <div>
+      <label for="phone">Phone Number *</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div>
+      <label for="email">Email Address *</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div>
+      <label for="city">City *</label>
+      <input id="city" name="city" autocomplete="address-level2" required>
+    </div>
+  </div>
+
+  <div>
+    <label for="address">Service Address</label>
+    <input id="address" name="address" autocomplete="street-address">
+  </div>
+
+  <div class="form-row form-row-three">
+    <div>
+      <label for="sqft">Home Size (sqft)</label>
+      <input id="sqft" name="sqft" type="number" min="0" step="1" inputmode="numeric" placeholder="e.g. 2200">
+    </div>
+    <div>
+      <label for="bedrooms">Bedrooms</label>
+      <input id="bedrooms" name="bedrooms" type="number" min="0" step="1" inputmode="numeric">
+    </div>
+    <div>
+      <label for="bathrooms">Bathrooms</label>
+      <input id="bathrooms" name="bathrooms" type="number" min="0" step="0.5" inputmode="decimal">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div>
+      <label for="service">Type of Cleaning *</label>
+      <select id="service" name="service" required>
+        <option value="">Select a service</option>
+        <option>Standard Residential Cleaning</option>
+        <option>Deep Cleaning</option>
+        <option>Recurring Cleaning</option>
+        <option>Move-In Cleaning</option>
+        <option>Move-Out Cleaning</option>
+        <option>Office / Commercial Cleaning</option>
+        <option>Airbnb / Short-Term Rental</option>
+        <option>Window Cleaning</option>
+        <option>Carpet Cleaning</option>
+      </select>
+    </div>
+    <div>
+      <label for="frequency">Frequency</label>
+      <select id="frequency" name="frequency">
+        <option>One-Time</option>
+        <option>Weekly</option>
+        <option>Biweekly</option>
+        <option>Monthly</option>
+        <option>Not Sure Yet</option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label for="preferredDate">Preferred Date</label>
+    <input id="preferredDate" name="preferredDate" type="date">
+  </div>
+
+  <div>
+    <label for="details">Additional Details</label>
+    <textarea id="details" name="details" placeholder="Tell us about your cleaning needs, priorities, pets, access instructions, or special requests."></textarea>
+  </div>
+
+  <div class="honeypot" aria-hidden="true">
+    <label for="website">Website</label>
+    <input id="website" name="website" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button class="btn btn-gold submit-btn" type="submit">
+    <span class="button-label">Send Estimate Request</span>
+  </button>
+  <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+  <p class="form-privacy">Your information is used only to respond to your estimate request.</p>
+</form>
+</div>
+
 </div></section>
 </main>
 <footer class="footer">
