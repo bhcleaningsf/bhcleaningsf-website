@@ -1,2 +1,3 @@
-# bhcleaningsf-website
-Official website for BH Cleaning SF
+# BH Cleaning SF Official Website
+
+Static five-page website ready for GitHub and Vercel.
